@@ -137,6 +137,9 @@ header.top{position:sticky; top:0; z-index:50; background:rgba(255,255,255,.92);
 /* form card */
 .form-card{background:#fff; border:2px solid var(--accent); border-radius:18px; padding:18px; color:var(--ink); box-shadow:var(--shadow)}
 .form-card h3{margin-bottom:2px; font-size:18px}
+.howq{display:flex; align-items:center; justify-content:space-between; width:100%; background:none; border:none; padding:0 0 8px; margin:0; font:inherit; font-weight:800; font-size:18px; color:var(--ink); cursor:pointer; text-align:left}
+.howq .chev{font-size:16px; color:var(--accent); transition:transform .25s} .howq[aria-expanded="true"] .chev{transform:rotate(180deg)}
+.steps4[hidden]{display:none}
 .form-card .sub{color:var(--muted); font-size:13.5px; margin-bottom:12px}
 .inp{width:100%; padding:14px 15px; border:1.5px solid #cfd8e3; border-radius:12px; font-size:16px; font-family:inherit; outline:none; margin-bottom:10px;
   transition:border-color .15s, box-shadow .15s}
@@ -311,7 +314,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <div class="product-card">
           <span class="disc-ribbon disc"></span>
           <img src="../../img/omni-artodip-gel.webp" alt="Artodip gel" width="200" height="374" fetchpriority="high" decoding="async">
-          <div><span class="ribbon">Gratis</span><div class="shotcap">So schaut die Originalverpackung aus, die der Zusteller bringt: Siegel, Chargennummer, Haltbarkeitsdatum.</div></div>
+          <div><span class="ribbon">1 Packung geschenkt</span><div class="shotcap">So schaut die Originalverpackung aus, die der Zusteller bringt: Siegel, Chargennummer, Haltbarkeitsdatum.</div></div>
         </div>
       </div>
         <div class="scarcity" id="scarcity">
@@ -328,30 +331,30 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         <h1>Artodip gel® — die einzige offizielle Herstellerseite in Österreich</h1>
         <p class="sub-h">Artodip gel direkt ab Hersteller: keine Anzahlung, bezahlt wird beim Zusteller.</p>
         <div class="price-box">
-          <span class="price-new">1 PACK. GRATIS</span>
+          <span class="price-new">+1 Packung GESCHENKT</span>
           <span class="price-old"></span>
           <span class="save-badge disc"></span>
         </div>
-        <p class="pricenote">Aktion des Herstellers: die erste Packung gratis, verrechnet wird nur die Zustellung.</p>
+        <p class="pricenote">Herstelleraktion: zu jeder Bestellung eine Packung geschenkt. Den Preis bestätigt Ihnen der Berater am Telefon.</p>
 
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
-            <h3>Originalware bestellen</h3>
-            <ol class="steps4"><li>Sie tragen Ihren Namen und Ihre Telefonnummer ein</li><li>Ein Berater ruft an und stimmt Adresse und Zustelltermin ab, ohne Kartendaten</li><li>Der Zusteller bringt die Sendung in 1–3 Tagen</li><li>Sie sehen die Sendung bei der Übernahme durch und zahlen beim Zusteller</li></ol>
+            <button type="button" class="howq" aria-expanded="false">Wie bestellen?<span class="chev">▾</span></button>
+            <ol class="steps4" hidden><li>Sie tragen Ihren Namen und Ihre Telefonnummer ein</li><li>Ein Berater ruft an und stimmt Adresse und Zustelltermin ab, ohne Kartendaten</li><li>Der Zusteller bringt die Sendung in 1–3 Tagen</li><li>Sie sehen die Sendung bei der Übernahme durch und zahlen beim Zusteller</li></ol>
             <input class="inp" type="text" name="name" placeholder="Vor- und Zuname" autocomplete="name">
             <div class="phone-field"><span class="p48">🇦🇹 +43</span><input class="inp" type="tel" name="phone" placeholder="664 1234567" inputmode="numeric" autocomplete="tel"></div>
             <p class="ph-err">Bitte eine gültige Telefonnummer eingeben</p>
             <p class="phonewhy">Die Nummer brauchen wir für den Bestätigungsanruf. Sie wird nur an den Verkäufer, den Bestätigungsservice und den Zusteller weitergegeben.</p>
             <input type="hidden" name="kw" value="at-omni-artodip-gel">
-            <button class="btn btn-primary btn-cta" type="submit">GRATIS SICHERN</button>
+            <button class="btn btn-primary btn-cta" type="submit">MIT GESCHENK BESTELLEN</button>
             <p class="today-line">🛒 Heute haben bereits bestellt <b class="todayN">—</b> Personen</p>
-            <p class="form-note">Zu zahlen ist nur die Zustellung — bei Übernahme</p>
+            <p class="form-note">Zahlung bei Übernahme der Sendung; die geschenkte Packung liegt im selben Paket bei</p>
           </form>
           <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <b>Danke! Ihre Bestellung ist bei uns eingelangt.</b><p class="ok-when"></p><p class="ok-keep">🔔 Bitte halten Sie Ihr Telefon bereit und heben Sie ab.</p></div>
         </div>
         <div class="sig">
-          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Ware<br>gratis</div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="13" rx="2"/><path d="M2 10h20M6 15h3"/></svg>Eine Packung<br>geschenkt</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg>Zusteller<br>1-3 Tage</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5M9 11l1.5 1.5L13.5 9"/></svg>Prüfen,<br>dann zahlen</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Berater<br>meldet sich</div>
@@ -549,7 +552,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
           <div class="eyebrow" style="color:#7fb0ff">Die einzige offizielle Herstellerseite</div>
           <h2>Artodip gel® im Original bestellen</h2>
           <p class="muted" style="font-size:14.5px">Formular ausfüllen — ein Berater meldet sich in wenigen Minuten telefonisch und stimmt Adresse und Zustelltermin ab. Eine Anzahlung gibt es nicht.</p>
-          <div class="price-box"><span class="price-new">1 PACK. GRATIS</span><span class="price-old"></span><span class="save-badge disc"></span></div>
+          <div class="price-box"><span class="price-new">+1 Packung GESCHENKT</span><span class="price-old"></span><span class="save-badge disc"></span></div>
           <ul class="perks">
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Erst zahlen, wenn zugestellt wird</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Kontrolle vor der Bezahlung</li>
@@ -559,16 +562,16 @@ body.free .disc,body:not(.free) .nodisc{display:none}
         </div>
         <div class="form-card">
           <form class="order-form" autocomplete="on" novalidate>
-            <h3>Originalware bestellen</h3>
-            <ol class="steps4"><li>Sie tragen Ihren Namen und Ihre Telefonnummer ein</li><li>Ein Berater ruft an und stimmt Adresse und Zustelltermin ab, ohne Kartendaten</li><li>Der Zusteller bringt die Sendung in 1–3 Tagen</li><li>Sie sehen die Sendung bei der Übernahme durch und zahlen beim Zusteller</li></ol>
+            <button type="button" class="howq" aria-expanded="false">Wie bestellen?<span class="chev">▾</span></button>
+            <ol class="steps4" hidden><li>Sie tragen Ihren Namen und Ihre Telefonnummer ein</li><li>Ein Berater ruft an und stimmt Adresse und Zustelltermin ab, ohne Kartendaten</li><li>Der Zusteller bringt die Sendung in 1–3 Tagen</li><li>Sie sehen die Sendung bei der Übernahme durch und zahlen beim Zusteller</li></ol>
             <input class="inp" type="text" name="name" placeholder="Vor- und Zuname" autocomplete="name">
             <div class="phone-field"><span class="p48">🇦🇹 +43</span><input class="inp" type="tel" name="phone" placeholder="664 1234567" inputmode="numeric" autocomplete="tel"></div>
             <p class="ph-err">Bitte eine gültige Telefonnummer eingeben</p>
             <p class="phonewhy">Die Nummer brauchen wir für den Bestätigungsanruf. Sie wird nur an den Verkäufer, den Bestätigungsservice und den Zusteller weitergegeben.</p>
             <input type="hidden" name="kw" value="at-omni-artodip-gel">
-            <button class="btn btn-primary btn-cta" type="submit">GRATIS SICHERN</button>
+            <button class="btn btn-primary btn-cta" type="submit">MIT GESCHENK BESTELLEN</button>
             <p class="today-line">🛒 Heute haben bereits bestellt <b class="todayN">—</b> Personen</p>
-            <p class="form-note">Zu zahlen ist nur die Zustellung — bei Übernahme</p>
+            <p class="form-note">Zahlung bei Übernahme der Sendung; die geschenkte Packung liegt im selben Paket bei</p>
           </form>
           <div class="ok-msg"><div class="ok-big"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg></div>
             <b>Danke! Ihre Bestellung ist bei uns eingelangt.</b><p class="ok-when"></p><p class="ok-keep">🔔 Bitte halten Sie Ihr Telefon bereit und heben Sie ab.</p></div>
@@ -589,7 +592,7 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 
 <script>
 (function(){
-  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='at-omni-artodip-gel', KEYWORD='artodip-gel', BTN='GRATIS SICHERN';
+  var WORKER='https://pilot-leads.bnsshub.workers.dev', KW='at-omni-artodip-gel', KEYWORD='artodip-gel', BTN='MIT GESCHENK BESTELLEN';
   if(''==='') document.body.classList.add('free');
   var qs=new URLSearchParams(location.search);
   // click-id из трекера: основной параметр cid; запасные — субы сетей и gclid Google
@@ -632,6 +635,8 @@ body.free .disc,body:not(.free) .nodisc{display:none}
 
 
   // --- FAQ ---
+  // «Как заказать?» — шаги заказа раскрываются по клику (17.09)
+  Array.prototype.forEach.call(document.querySelectorAll('.howq'),function(b){ b.addEventListener('click',function(){ var ol=b.nextElementSibling, o=b.getAttribute('aria-expanded')==='true'; b.setAttribute('aria-expanded',o?'false':'true'); if(ol) ol.hidden=o; }); });
   document.querySelectorAll('.q button').forEach(function(btn){
     btn.addEventListener('click',function(){ var q=btn.parentElement, a=q.querySelector('.ans');
       if(q.classList.contains('open')){ q.classList.remove('open'); a.style.maxHeight=null; }
